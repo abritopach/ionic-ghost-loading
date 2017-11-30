@@ -1,0 +1,93 @@
+@keyframes pulse {
+    0% {
+      background-color: rgba(color($colors, dark), .15);
+    }
+    50% {
+      background-color: rgba(color($colors, dark), .1);
+    }
+    100% {
+      background-color: rgba(color($colors, dark), .15);
+    }
+}
+
+ghost-loading {
+    display: inherit;
+    &.isLoading {
+        &:after {
+        display: inline-block;
+        content: '\00a0';
+        margin-bottom: 5px;
+        width: 100%;
+        border-radius: 6px;
+        animation: pulse 2s infinite;
+        animation-timing-function: ease-in-out;
+        }
+        &.ghost-loading-input {
+        &:after {
+            width: 90%;
+            height: 45px;
+        }
+        }
+        &.paragraph {
+        &:after,
+        &:before {
+            width: 100%;
+        }
+        &:before {
+            display: inline-block;
+            content: '\00a0';
+            width: 100%;
+            border-radius: 6px;
+            animation: pulse 2s infinite;
+            animation-timing-function: ease-in-out;
+            margin-bottom: 5px;
+        }
+        }
+        &.xl {
+        &:after {
+            width: 100%;
+        }
+        }
+        &.lg {
+        &:after {
+            width: 90%;
+        }
+        }
+        &.md {
+        &:after {
+            width: 50%;
+        }
+        }
+        &.sm {
+        &:after {
+            width: 25%;
+        }
+        }
+        &.xs {
+        &:after {
+            width: 20px;
+            min-width: 20px;
+        }
+        }
+    }
+    /* sort hacky with images..*/
+    &.img {
+        &.isLoading {
+        &.square {
+            &:after {
+            width: 100%;
+            height: 25rem;
+            border-radius: 0;
+            }
+        }
+        &:after {
+            width: 4rem;
+            height: 4rem;
+            margin: auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        }
+    }
+}

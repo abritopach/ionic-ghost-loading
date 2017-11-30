@@ -1,14 +1,64 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ionic Ghost Loading Example
     </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="refresh()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <ghost-loading class="img isLoading">
+          <img src="https://unsplash.it/80/80?image=100">
+        </ghost-loading>
+      </ion-avatar>
+      <ghost-loading class="sm isLoading">
+        <h2>Marty McFly</h2>
+      </ghost-loading>
+      <ghost-loading class="lg isLoading">
+        <p>November 5, 1955</p>
+      </ghost-loading>
+    </ion-item>
+    <ghost-loading class="img square isLoading">
+      <img src="https://unsplash.it/300/200?image=50">
+    </ghost-loading>
+    <ion-card-content>
+      <ghost-loading class="paragraph isLoading">
+        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+          Whoa. This is heavy.</p>
+      </ghost-loading>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <ghost-loading class="lg isLoading">
+            <button ion-button icon-left clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 Likes</div>
+            </button>
+        </ghost-loading>
+      </ion-col>
+      <ion-col>
+        <ghost-loading class="lg isLoading">
+          <button ion-button icon-left clear small>
+            <ion-icon name="text"></ion-icon>
+            <div>4 Comments</div>
+          </button>
+        </ghost-loading>
+      </ion-col>
+      <ion-col center text-center>
+        <ghost-loading class="lg isLoading">
+          <ion-note>
+            11h ago
+          </ion-note>
+        </ghost-loading>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 </ion-content>
