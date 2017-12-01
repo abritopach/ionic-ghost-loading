@@ -4,6 +4,8 @@ Sample project that shows how to loads a base view with all the content areas bl
 Once populated the ghosted areas are filled with real data: translated text, images, ads, etc..
 
 [Source Will Bowman](https://medium.com/@asked_io/ghost-loading-with-angular-2-7958404c8c5c)
+
+![App example](readme_resources/ghost-loading.gif "App example")
     
 ## Running
 
